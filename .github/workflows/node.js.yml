@@ -54,7 +54,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: tomaszcrm/devops-ci-pipeline
-          tags: v1, latest
+          tags: v1
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
