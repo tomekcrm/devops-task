@@ -73,7 +73,7 @@ jobs:
       - name: Run the image in a container
         uses: addnab/docker-run-action@v3
         with:
-          image: ${{ secrets.REACTUSERNAME }}/tomaszcrm/devops-ci-pipeline
+          image: ${{ secrets.REACTUSERNAME }}/devops-ci-pipeline
           run: |
             echo "runing the docker image"
 
