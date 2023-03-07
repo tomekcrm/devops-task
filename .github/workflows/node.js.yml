@@ -47,6 +47,7 @@ jobs:
         with:
           image: tomaszcrm/devops-ci-pipeline
           registry: docker.io
+          tags: v1
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       
