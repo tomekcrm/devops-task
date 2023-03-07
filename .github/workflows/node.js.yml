@@ -41,21 +41,12 @@ jobs:
         run: |
           npm run build
           npm test
-  push_to_Docker_Hub:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    # build docker image and push to docker hub
-    # only if the app build and test successfully
-    needs: [build_test]
-    steps:
-      - uses: actions/checkout@v3
-        name: Check out code
-      - uses: mr-smithers-excellent/docker-build-push@v6
-        name: Build & push Docker image
+
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: tomaszcrm/devops-ci-pipeline
           registry: docker.io
-          dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       
