@@ -49,18 +49,18 @@ jobs:
     needs: [build_test]
     
   steps:
-  - uses: actions/checkout@v3
-    name: Check out code
+    - uses: actions/checkout@v3
+      name: Check out code
 
-  - uses: mr-smithers-excellent/docker-build-push@v6
-    name: Build & push Docker image
-    with:
-      image: tomaszcrm/devops-ci-pipeline
-      tags: v1, latest
-      registry: registry-url.io
-      dockerfile: Dockerfile.ci
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+    - uses: mr-smithers-excellent/docker-build-push@v6
+      name: Build & push Docker image
+      with:
+        image: tomaszcrm/devops-ci-pipeline
+        tags: v1, latest
+        registry: registry-url.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
             
             
             
