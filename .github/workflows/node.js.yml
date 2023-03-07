@@ -77,5 +77,3 @@ jobs:
           run: |
             echo "runing the docker image"
 
-        
-view rawnode.js.yml hosted with ❤ by GitHub
