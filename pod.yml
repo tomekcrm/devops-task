@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calc-app
+  labels:
+    app: calc-app
+spec:
+  containers:
+  - name: app-calc
+    image: tomaszcrm/devops-ci-pipeline
+    ports:
+      - containerPort: 3000
+
